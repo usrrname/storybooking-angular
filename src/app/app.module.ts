@@ -4,29 +4,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import ButtonComponent from './components/button/button.component';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
-import { FooterComponent } from './components/footer/footer.component';
-import { FormsModule } from '@angular/forms';
-import { HeaderComponent } from './components/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { SharedModule } from './shared/shared.module';
 import { TaskModule } from './components/task/task.module';
 
 @NgModule({
-  declarations: [
-    HeaderComponent,
-    AppComponent,
-    FooterComponent
-  ],
+  declarations: [],
   imports: [
     BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule,
+    SharedModule,
     BrowserModule,
     TaskModule,
-    AccordionModule.forRoot(),
-    BsDropdownModule.forRoot(),
-    CollapseModule.forRoot(),
     AppRoutingModule
   ],
   providers: [],

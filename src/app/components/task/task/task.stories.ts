@@ -2,7 +2,7 @@ import {TaskComponent} from './task.component';
 import { action } from '@storybook/addon-actions';
 
 export default {
-  title: 'Task',
+  title: 'Example/Task',
   excludeStories: /.*Data$/,
 };
 

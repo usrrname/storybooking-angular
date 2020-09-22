@@ -6,7 +6,7 @@ import { TaskListComponent } from './task-list.component';
 import { moduleMetadata } from '@storybook/angular';
 
 export default {
-  title: 'TaskList',
+  title: 'Example/TaskList',
   excludeStories: /.*Data$/,
   decorators: [
     moduleMetadata({

@@ -1,14 +1,11 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  selector: 'app-page',
+  templateUrl: './page.component.html',
+  styleUrls: ['./page.component.scss']
 })
-
-export class HeaderComponent implements OnInit {
-  title = 'Header';
-  constructor() { }
+export class PageComponent implements OnInit {
   @Input()
   user: unknown = null;
 
@@ -20,6 +17,8 @@ export class HeaderComponent implements OnInit {
 
   @Output()
   onCreateAccount = new EventEmitter<Event>();
+  constructor() { }
+
   ngOnInit(): void {
   }
 

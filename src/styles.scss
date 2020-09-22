@@ -4,9 +4,10 @@
 
 
 footer {
-  display: flex;
+  display: inherit;
   width: 100%;
   height: auto;
   position: absolute;
+  left: 0;
   bottom: 0;
 }
