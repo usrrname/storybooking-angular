@@ -23,6 +23,9 @@
     "@angular/platform-browser": "~10.1.2",
     "@angular/platform-browser-dynamic": "~10.1.2",
     "@angular/router": "~10.1.2",
+    "@ngxs/devtools-plugin": "^3.7.0",
+    "@ngxs/logger-plugin": "^3.7.0",
+    "@ngxs/store": "^3.7.0",
     "bootstrap": "^4.5.2",
     "ngx-bootstrap": "^6.1.0",
     "rxjs": "~6.6.0",
@@ -70,7 +73,7 @@
     "setupFilesAfterEnv": [
       "<rootDir>/src/jest-config/setup.ts"
     ],
-    "transformIgnorePatterns":[
+    "transformIgnorePatterns": [
       "node_modules/(?!@storybook/*)"
     ],
     "testPathIgnorePatterns": [

@@ -26,9 +26,10 @@ export const defaultTasksData = [
   { ...taskData, id: '6', title: 'Task 6' },
 ];
 export const withPinnedTasksData = [
-  ...defaultTasksData.slice(0, 5),
+  ...defaultTasksData.slice(0, defaultTasksData.length),
   { id: '6', title: 'Task 6 (pinned)', state: 'TASK_PINNED' },
 ];
+
 // default TaskList state
 export const Default = () => ({
   component: TaskListComponent,
@@ -73,3 +74,4 @@ export const Empty = () => ({
         </div>
       `,
 });
+

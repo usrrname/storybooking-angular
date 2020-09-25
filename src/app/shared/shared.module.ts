@@ -1,5 +1,6 @@
 import { AccordionModule } from 'ngx-bootstrap/accordion';
-import { AppComponent } from '../app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import ButtonComponent from '../components/button/button.component';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
@@ -13,16 +14,13 @@ import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    HeaderComponent,
-    AppComponent,
-    FooterComponent,
-    ButtonComponent,
-    PageComponent
   ],
   imports: [
     FormsModule,
     CollapseModule,
     CommonModule,
+    BrowserModule,
+    BrowserAnimationsModule,
     RouterModule,
     AccordionModule.forRoot(),
     BsDropdownModule.forRoot(),
@@ -30,6 +28,8 @@ import { RouterModule } from '@angular/router';
   ],
   exports: [
     FormsModule,
+    BrowserModule,
+    BrowserAnimationsModule,
     CollapseModule,
     CommonModule,
     RouterModule,

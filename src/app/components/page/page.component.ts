@@ -6,8 +6,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./page.component.scss']
 })
 export class PageComponent implements OnInit {
-  @Input()
-  user: unknown = null;
+  @Input() user: unknown = null;
 
   @Output()
   onLogin = new EventEmitter<Event>();

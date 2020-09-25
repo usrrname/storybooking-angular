@@ -2,7 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
 
-It uses ngx-bootstrap to augment certain components with animation.
+It uses `ngx-bootstrap` to augment certain Bootstrap components with animation.
+
+The task list was based on the "Learn Storybook"[https://www.learnstorybook.com/intro-to-storybook/angular/en/get-started/] Angular tutorial 
 
 ## Development server
 
