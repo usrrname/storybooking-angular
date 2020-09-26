@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export default class ButtonComponent {
   /**
-   * Is this the principal call to action on the page?
+   * Button with the principal call-to-action
    */
   @Input()
   primary = false;
@@ -19,7 +19,7 @@ export default class ButtonComponent {
   backgroundColor?: string;
 
   /**
-   * How large should the button be?
+   * Button size is subbed with Bootstrap sizes
    */
   @Input()
   size: 'sm' | 'md' | 'lg' = 'md';
