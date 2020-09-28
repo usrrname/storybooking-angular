@@ -1,5 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import ButtonComponent from '../button/button.component';
+import { FooterComponent } from '../footer/footer.component';
+import { HeaderComponent } from '../header/header.component';
 import { PageComponent } from './page.component';
 
 describe('PageComponent', () => {
@@ -8,7 +11,7 @@ describe('PageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PageComponent ]
+      declarations: [ PageComponent, ButtonComponent, HeaderComponent, FooterComponent ]
     })
     .compileComponents();
   });

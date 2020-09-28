@@ -1,8 +1,10 @@
+@import '../../../../styles/styles.scss';
+
 @font-face {
   font-family: 'percolate';
-  src: url('../../../../assets/icon/percolate.eot?-5w3um4');
-  src: url('../../../../assets/icon/percolate.eot?#iefix5w3um4') format('embedded-opentype'), url('../../../../assets/icon/percolate.woff?5w3um4')
-      format('woff'), url('../../../../assets/icon/percolate.ttf?5w3um4') format('truetype'), url('../../../../assets/icon/percolate.svg?5w3um4')
+  src: url('/../../../assets/icon/eot?-5w3um4');
+  src: url('/../../../assets/icon/eot?#iefix5w3um4') format('embedded-opentype'), url('/../../../assets/icon/percolate.woff?5w3um4')
+      format('woff'), url('/../../../assets/icon/percolate.ttf?5w3um4') format('truetype'), url('/../../../assets/icon/percolate.svg?5w3um4')
       format('svg');
   font-weight: normal;
   font-style: normal;
@@ -10,7 +12,7 @@
 /* Reset.less
  * Props to Eric Meyer (meyerweb.com) for his CSS reset file. We're using an adapted version here	that cuts out some of the reset HTML elements we will never need here (i.e., dfn, samp, etc).
  * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
- @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,800');
+ @import url('https://fonts.googleapis.com/css?family=Roboto+Sans:400,400i,800');
  html,
  body {
    margin: 0;
@@ -229,11 +231,11 @@
    -moz-osx-font-smoothing: grayscale;
  }
  body {
-   font-family: 'Nunito Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-family: $secondary-type;
    font-style: 400;
    color: #333;
    font-size: 16px;
-   background-color: #26c6da;
+   background-color: inherit;
  }
  h1,
  h2,
@@ -241,7 +243,7 @@
  h4,
  h5,
  h6 {
-   font-family: 'Nunito Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-family: $primary-type;
    font-style: 400;
    margin: 0;
    padding: 0;
@@ -343,7 +345,7 @@
    height: 0.85em;
    transform: translate3d(-50%, -50%, 0);
    background: transparent;
-   box-shadow: #2cc5d2 0 0 0 1px inset;
+   box-shadow: $darktealgreen 0 0 0 1px inset;
    content: '';
    display: block;
  }
@@ -351,7 +353,7 @@
    font-size: 16px;
    line-height: 24px;
    box-shadow: none;
-   color: #2cc5d2;
+   color: $darktealgreen;
    margin-top: -1px;
    font-family: 'percolate';
    speak: none;
@@ -384,7 +386,7 @@
  }
  .input-symbol input:focus + [class^="icon-"],
  .input-symbol input:focus + [class*=" icon-"] {
-   color: #2cc5d2;
+   color: $pink;
  }
  .input-symbol [class^="icon-"],
  .input-symbol [class*=" icon-"] {
@@ -399,7 +401,7 @@
    width: 1em;
  }
  @font-face {
-   font-family: "percolate";
+   font-family: $primary-type;
    src: url("/icon/percolate.eot?-5w3um4");
    src: url("/icon/percolate.eot?#iefix5w3um4") format("embedded-opentype"), url("/icon/percolate.woff?5w3um4") format("woff"), url("/icon/percolate.ttf?5w3um4") format("truetype"), url("/icon/percolate.svg?5w3um4") format("svg");
    font-weight: normal;
@@ -407,7 +409,7 @@
  }
  [class^="icon-"],
  [class*=" icon-"] {
-   font-family: "percolate";
+   font-family: $primary-type;
    speak: none;
    font-style: normal;
    font-weight: normal;
@@ -807,15 +809,15 @@
  }
  a {
    transition: all 200ms ease-in;
-   color: #5db9ff;
+   color: $pink;
    cursor: pointer;
    text-decoration: none;
  }
  a:hover {
-   color: #239da8;
+   color: $darktealgreen;
  }
  a:active {
-   color: #555;
+   color: $wetstone;
  }
  a:focus {
    outline: none;
@@ -872,10 +874,10 @@
    color: #eee;
  }
  .list-item .actions a:hover {
-   color: #2cc5d2;
+   color: $sage-green;
  }
  .list-item .actions a:active {
-   color: #555;
+   color: $wetstone;
  }
  .list-item .actions [class^="icon-"] {
    font-size: 16px;
@@ -954,7 +956,7 @@
  .wrapper-message [class*=" icon-"] {
    font-size: 48px;
    line-height: 56px;
-   color: #2cc5d2;
+   color: $darktealgreen;
    display: block;
  }
  .wrapper-message .title-message {
@@ -962,7 +964,7 @@
    line-height: 24px;
    font-family: 'Nunito Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
    font-weight: 800;
-   color: #555;
+   color: $wetstone;
  }
  .wrapper-message .subtitle-message {
    font-size: 14px;
@@ -974,7 +976,7 @@
    background: white;
  }
  .page.lists-show nav {
-   background: #d3edf4;
+   background: #e8edee;
    padding: 1.5rem 1.25rem;
    text-align: center;
  }

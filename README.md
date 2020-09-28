@@ -1,7 +1,7 @@
 # Storybok
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
-
+It uses storybook 6.0.22
 It uses `ngx-bootstrap` to augment certain Bootstrap components with animation.
 
 The task list was based on the "Learn Storybook"[https://www.learnstorybook.com/intro-to-storybook/angular/en/get-started/] Angular tutorial 
@@ -20,7 +20,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `ng karmaTest` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ## Running end-to-end tests
 

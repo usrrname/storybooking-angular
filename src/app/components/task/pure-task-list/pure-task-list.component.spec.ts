@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PureTaskListComponent } from './pure-task-list.component';
+import { TaskComponent } from '../task/task.component';
 
 describe('PureTaskListComponent', () => {
   let component: PureTaskListComponent;
@@ -8,7 +9,7 @@ describe('PureTaskListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PureTaskListComponent ]
+      declarations: [ PureTaskListComponent, TaskComponent ]
     })
     .compileComponents();
   });
@@ -20,6 +21,6 @@ describe('PureTaskListComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component);
   });
 });

@@ -8,6 +8,7 @@ export default {
   component: ButtonComponent,
   argTypes: {
     backgroundColor: { control: 'color' },
+    value: {control: 'label'}
   },
 } as Meta;
 

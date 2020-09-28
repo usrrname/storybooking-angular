@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 
 export class HeaderComponent implements OnInit {
-  title = 'Header';
+  title = 'Apothecary';
   constructor() { }
   @Input()
   user: unknown = null;

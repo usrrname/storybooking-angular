@@ -1,0 +1,21 @@
+/* Type */
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+$primary-type: 'Arsenal', sans-serif;
+$secondary-type: 'Roboto', sans-serif;
+
+/* Colors */
+$white: #EEEEEE;
+$papyrus: #fbf4de;
+$pink: #fbd1df;
+$chromeyellow: #f6c63f;
+$barkbrown:	#764013;
+$darktealgreen: #5b8488;
+$sage-green:#5aa488;
+$webfriendlygray: #ccc;
+$wetstone: #555;
+$body-background-light: $papyrus;
+$primary-button-fill: transparent;
+$secondary-button-fill: transparent;
+$button-outline: $barkbrown;
+$base-unit: 16px;

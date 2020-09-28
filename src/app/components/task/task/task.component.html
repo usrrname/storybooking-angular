@@ -1,10 +1,10 @@
 <div class="list-item {{ task?.state }}">
   <label class="checkbox">
-    <input type="checkbox" name="checked" [checked]="task?.state === 'TASK_ARCHIVED' && task?.done" disabled="true" />
+    <input type="checkbox" name="checked" [checked]="task?.state === 'TASK_ARCHIVED' && task?.done" disabled />
     <span class="custom-checkbox" (click)=onArchive(task.id)> </span>
   </label>
   <div class="title">
-    <input type="text" [value]="task?.title" readonly="true" placeholder="Input title" />
+    <input type="text" [value]="task?.title" readonly="true" placeholder="Input title" [ngStyle]="{textOverflow:'ellipsis'}" />
   </div>
   <div class="actions">
     <a *ngIf="task?.state !== 'TASK_ARCHIVED'" (click)="onPin(task.id)">

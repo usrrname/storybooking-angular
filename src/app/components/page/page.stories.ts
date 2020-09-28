@@ -3,7 +3,6 @@ import * as HeaderStories from '../header/header.stories';
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import { Meta, Story } from '@storybook/angular/types-6-0';
 
-import { AppComponent } from 'src/app/app.component';
 import Button from '../button/button.component';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from '../footer/footer.component';
@@ -18,7 +17,7 @@ export default {
     moduleMetadata({
       declarations: [Button, HeaderComponent, FooterComponent],
       imports: [CommonModule],
-      providers: [AppComponent]
+      providers: [PageComponent]
     }),
   ],
 } as Meta;

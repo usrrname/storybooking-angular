@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+@import "_variables.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+@font-face{
+  font-family: $primary-type;
+  src: url('https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $primary-type;
+}
+
+body {
+  background-color: $body-background-light;
+}
+
+body,
+p {
+  font-family: $secondary-type;
+}
+
+a {
+  text-decoration: none;
+  color: $barkbrown;
+}
+
+button,
+.btn {
+  border-radius: 0;
+
+  &.btn-primary{
+    background-color: $primary-button-fill;
+    color: $barkbrown;
+    outline: $button-outline solid 1px;
+    &:hover {
+    background-color: $papyrus;
+  }
+  }
+
+  &.btn-secondary{
+    background-color: $secondary-button-fill;
+    color: $webfriendlygray;
+    outline: $webfriendlygray solid 1px;
+  }
+  &:hover {
+    font-weight: bold;
+  }
+
+}
+
+footer {
+  display: inherit;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}

@@ -29,6 +29,10 @@ export const withPinnedTasksData = [
   ...defaultTasksData.slice(0, 5),
   { id: '6', title: 'Task 6 (pinned)', state: 'TASK_PINNED' },
 ];
+export const archivedTasksData = [
+  { id: '1', title: 'Task 6 (pinned)', state: 'TASK_ARCHIVED', done: true },
+  ...defaultTasksData.slice(1, 5)
+];
 // default TaskList state
 export const Default = () => ({
   component: PureTaskListComponent,
@@ -43,6 +47,22 @@ export const Default = () => ({
     onArchiveTask: actionsData.onArchiveTask,
   },
 });
+
+// default TaskList state
+export const Archived = () => ({
+  component: PureTaskListComponent,
+  template: `
+  <div style="padding: 3rem">
+    <app-pure-task-list [tasks]="tasks" (onPinTask)="onPinTask($event)" (onArchiveTask)="onArchiveTask($event)"></app-pure-task-list>
+  </div>
+`,
+  props: {
+    tasks: archivedTasksData,
+    onPinTask: actionsData.onPinTask,
+    onArchiveTask: actionsData.onArchiveTask,
+  },
+});
+
 // tasklist with pinned tasks
 export const WithPinnedTasks = () => ({
   component: PureTaskListComponent,

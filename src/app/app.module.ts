@@ -13,7 +13,6 @@ import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { NgxsModule } from '@ngxs/store';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { PageComponent } from './components/page/page.component';
-import { PureTaskListComponent } from './components/task/pure-task-list/pure-task-list.component';
 import { SharedModule } from './shared/shared.module';
 import { TaskModule } from './components/task/task.module';
 

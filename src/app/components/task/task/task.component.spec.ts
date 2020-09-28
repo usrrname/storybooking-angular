@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TaskComponent } from './task.component';
+import { taskData } from './task.stories';
 
 describe('TaskComponent', () => {
   let component: TaskComponent;
@@ -20,6 +21,6 @@ describe('TaskComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(taskData);
   });
 });

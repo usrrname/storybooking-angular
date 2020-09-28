@@ -1,15 +1,16 @@
+@import '../../../styles/styles.scss';
+
 section {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: inherit;
   font-size: 14px;
   line-height: 24px;
   padding: 48px 20px;
   margin: 0 auto;
   max-width: 600px;
-  color: #333;
+  color: $wetstone;
 }
 
 h2 {
-  font-weight: 900;
   font-size: 32px;
   line-height: 1;
   margin: 0 0 4px;
@@ -19,11 +20,6 @@ h2 {
 
 p {
   margin: 1em 0;
-}
-
-a {
-  text-decoration: none;
-  color: #1ea7fd;
 }
 
 ul {
@@ -42,7 +38,7 @@ li {
   line-height: 12px;
   font-weight: 700;
   background: #e7fdd8;
-  color: #66bf3c;
+  color: $darktealgreen;
   padding: 4px 12px;
   margin-right: 10px;
   vertical-align: top;
@@ -65,5 +61,5 @@ li {
 }
 
 .tip-wrapper svg path {
-  fill: #1ea7fd;
+  fill: $chromeyellow;
 }
