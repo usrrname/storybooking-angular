@@ -20,7 +20,7 @@ describe('PureTaskListComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create task list', () => {
     expect(component);
   });
 });

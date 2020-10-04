@@ -12,10 +12,17 @@ import { Task } from '../../../models/types';
 })
 export class TaskListComponent implements OnInit {
   @Select(TasksState.getAllTasks) tasks$: Observable<Task[]>;
+  tasks: Task[] = [];
 
-  constructor(private store: Store) {}
+  constructor(private store: Store) {
+    this.store.select(TasksState)
+    .subscribe( tasks => {
+      this.tasks = tasks;
+    });
+  }
 
   ngOnInit(): void {}
+
   archiveTask(id: string): void {
     this.store.dispatch(new ArchiveTask(id));
   }

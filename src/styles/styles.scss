@@ -2,9 +2,9 @@
 @import "_variables.scss";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-@font-face{
+@font-face {
   font-family: $primary-type;
-  src: url('https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+  src: url("https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap");
   font-weight: normal;
   font-style: normal;
 }
@@ -36,24 +36,37 @@ button,
 .btn {
   border-radius: 0;
 
-  &.btn-primary{
-    background-color: $primary-button-fill;
+  &.btn-primary {
+    background-color: transparent;
     color: $barkbrown;
-    outline: $button-outline solid 1px;
-    &:hover {
-    background-color: $papyrus;
-  }
+    outline: $button-outline solid 2px;
+    border: $barkbrown;
+    &:hover,
+    &:active,
+    &:focus-within,
+    .show,
+    &:not(disabled) {
+      font-weight: bold;
+      background-color: $white;
+      color: $barkbrown;
+      border-color: $pink;
+      box-shadow: $pink 0 0 1 2px;
+    }
   }
 
-  &.btn-secondary{
+  &.btn-secondary {
     background-color: $secondary-button-fill;
-    color: $webfriendlygray;
-    outline: $webfriendlygray solid 1px;
+    color: $stone-gray;
+    outline: $webfriendlygray solid 2px;
   }
-  &:hover {
+  &:hover,
+  &:active,
+  .show,
+  &:not(disabled) {
     font-weight: bold;
+    color: $white;
+    background-color: $darktealgreen;
   }
-
 }
 
 footer {

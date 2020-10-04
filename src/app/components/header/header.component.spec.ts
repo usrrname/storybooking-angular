@@ -20,7 +20,7 @@ describe('HeaderComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component);
+  it('should have `Apothecary` as brand title', () => {
+    expect(fixture.componentInstance.title === 'Demo');
   });
 });

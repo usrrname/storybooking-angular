@@ -3,7 +3,7 @@
 section {
   font-family: inherit;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.5rem;
   padding: 48px 20px;
   margin: 0 auto;
   max-width: 600px;
@@ -61,5 +61,5 @@ li {
 }
 
 .tip-wrapper svg path {
-  fill: $chromeyellow;
+  fill: $chrome-yellow;
 }

@@ -13,13 +13,16 @@ describe('ButtonComponent', () => {
     .compileComponents();
   });
 
-  beforeEach(() => {
+  it('should create', () => {
     fixture = TestBed.createComponent(ButtonComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    expect(component).toBeDefined();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  it('raises the selected event when clicked', () => {
+    component = new ButtonComponent();
+    component.label = fixture.nativeElement.value;
+    component.onClick.subscribe((selected) => expect(selected).toBe(component.label));
+});
+
 });

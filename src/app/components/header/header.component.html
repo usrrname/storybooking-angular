@@ -28,25 +28,9 @@
       </ul>
     </div>
     <div>
-      <app-button
-        *ngIf="user"
-        size="sm"
-        (onClick)="onLogout.emit($event)"
-        label="Log out"
-      ></app-button>
-      <app-button
-        *ngIf="!user"
-        size="sm"
-        (onClick)="onLogin.emit($event)"
-        label="Log in"
-      ></app-button>
-      <app-button
-        *ngIf="!user"
-        primary
-        size="sm"
-        (onClick)="onCreateAccount.emit($event)"
-        label="Sign up"
-      ></app-button>
+      <app-button *ngIf="user" size="sm" (onClick)="onLogout.emit($event)" label="Log out"></app-button>
+      <app-button primary *ngIf="!user" size="sm" (onClick)="onLogin.emit($event)" label="Log in"></app-button>
+      <app-button *ngIf="!user" primary size="sm" (onClick)="onCreateAccount.emit($event)" label="Sign up"></app-button>
     </div>
   </nav>
 </header>

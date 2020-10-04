@@ -1,26 +1,28 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { Store } from '@ngxs/store';
 import { TaskComponent } from '../task/task.component';
 import { TaskListComponent } from './task-list.component';
 
-describe('TaskComponent', () => {
+describe('TaskListComponent', () => {
   let component: TaskListComponent;
   let fixture: ComponentFixture<TaskListComponent>;
+  fixture = TestBed.createComponent(TaskListComponent);
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TaskListComponent, TaskComponent ]
+      declarations: [TaskListComponent, TaskComponent],
+      providers: [Store]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(TaskListComponent);
-    component = fixture.componentInstance;
+
+  it('should render task list', async () => {
+    await fixture.whenStable();
     fixture.detectChanges();
-  });
-
-  it('should create task list', () => {
-    expect(component);
+    const hostElement = fixture.nativeElement.querySelectorAll('.list-items');
+    const taskListItems = hostElement.querySelectorAll('.list-item');
+    expect(taskListItems.length).toEqual(6);
   });
 });

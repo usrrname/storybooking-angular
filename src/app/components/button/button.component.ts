@@ -25,7 +25,7 @@ export default class ButtonComponent {
   size: 'sm' | 'md' | 'lg' = 'md';
 
   /**
-   * Button contents
+   * Button text value
    *
    * @required
    */

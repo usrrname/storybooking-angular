@@ -9,7 +9,6 @@ import { Task } from 'src/app/models/types';
 })
 export class TaskComponent implements OnInit {
   title: string;
-  done: boolean;
 
   @Input() public task: Task;
 

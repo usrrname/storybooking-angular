@@ -25,14 +25,17 @@ export const defaultTasksData = [
   { ...taskData, id: '5', title: 'Task 5' },
   { ...taskData, id: '6', title: 'Task 6' },
 ];
+
 export const withPinnedTasksData = [
   ...defaultTasksData.slice(0, 5),
   { id: '6', title: 'Task 6 (pinned)', state: 'TASK_PINNED' },
 ];
+
 export const archivedTasksData = [
   { id: '1', title: 'Task 6 (pinned)', state: 'TASK_ARCHIVED', done: true },
   ...defaultTasksData.slice(1, 5)
 ];
+
 // default TaskList state
 export const Default = () => ({
   component: PureTaskListComponent,

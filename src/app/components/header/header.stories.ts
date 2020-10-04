@@ -11,7 +11,7 @@ export default {
   component: HeaderComponent,
   decorators: [
     moduleMetadata({
-      declarations: [ButtonComponent],
+      declarations: [ButtonComponent, HeaderComponent],
       imports: [CommonModule],
     }),
   ],

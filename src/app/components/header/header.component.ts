@@ -20,6 +20,7 @@ export class HeaderComponent implements OnInit {
 
   @Output()
   onCreateAccount = new EventEmitter<Event>();
+
   ngOnInit(): void {
   }
 
