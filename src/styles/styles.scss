@@ -10,14 +10,12 @@
 }
 
 body {
-
   h1,
   h2,
   h3,
   h4,
   h5,
-  h6
-   {
+  h6 {
     font-family: $primary-type;
   }
 
@@ -31,14 +29,14 @@ body {
 a {
   text-decoration: none;
   color: $barkbrown;
-a:link {
-  color: inherit;
-}
-a:hover {
-  font-weight: medium;
-  text-decoration-line: underline;
-  text-decoration-color: $sage-green;
-}
+  a:link {
+    color: inherit;
+  }
+  a:hover {
+    font-weight: medium;
+    text-decoration-line: underline;
+    text-decoration-color: $sage-green;
+  }
 }
 
 .btn {
