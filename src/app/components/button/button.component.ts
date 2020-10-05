@@ -13,6 +13,11 @@ export default class ButtonComponent {
   primary = false;
 
   /**
+   * Disabled property is by default false
+   */
+  @Input()
+  disabled = false;
+  /**
    * What background color to use
    */
   @Input()

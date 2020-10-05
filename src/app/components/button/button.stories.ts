@@ -1,6 +1,6 @@
 // also exported from '@storybook/angular' if you can deal with breaking changes in 6.1
 import { Meta, Story } from '@storybook/angular/types-6-0';
-import { text, withKnobs } from '@storybook/addon-knobs';
+import { boolean, text, withKnobs } from '@storybook/addon-knobs';
 
 import ButtonComponent from './button.component';
 
@@ -11,7 +11,8 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
     size: {control: 'size'},
-    value: {control: 'label'}
+    value: {control: 'label'},
+    disabled: {control: 'disabled'}
   },
 } as Meta;
 
@@ -19,7 +20,8 @@ const Template: Story<ButtonComponent> = (args: ButtonComponent) => ({
   component: ButtonComponent,
   props: {
       ...args,
-      label: text('value', args.label )
+      label: text('value', args.label ),
+      disabled: boolean('disabled', false)
   }
 });
 

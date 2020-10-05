@@ -4,39 +4,53 @@
 
 @font-face {
   font-family: $primary-type;
-  src: url("https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+  src: url("../assets/font/Arsenal-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $primary-type;
-}
-
 body {
-  background-color: $body-background-light;
-}
 
-body,
-p {
-  font-family: $secondary-type;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+   {
+    font-family: $primary-type;
+  }
+
+  p {
+    font-family: $secondary-type;
+  }
+
+  background-color: $body-background-light;
 }
 
 a {
   text-decoration: none;
   color: $barkbrown;
+a:link {
+  color: inherit;
+}
+a:hover {
+  font-weight: medium;
+  text-decoration-line: underline;
+  text-decoration-color: $sage-green;
+}
 }
 
-button,
 .btn {
   border-radius: 0;
+  &:disabled {
+    background-color: inherit;
+    color: inherit;
+    cursor: not-allowed;
+  }
 
-  &.btn-primary {
+  &.btn-primary,
+  &:not(disabled) {
     background-color: transparent;
     color: $barkbrown;
     outline: $button-outline solid 2px;
@@ -69,11 +83,10 @@ button,
   }
 }
 
-footer {
-  display: inherit;
-  width: 100%;
-  height: auto;
-  position: absolute;
-  left: 0;
-  bottom: 0;
+pre,
+code,
+kbd,
+samp {
+  color: inherit;
+  background-color: inherit;
 }

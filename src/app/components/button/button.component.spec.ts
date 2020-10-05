@@ -8,21 +8,27 @@ describe('ButtonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ButtonComponent ]
+      declarations: [ButtonComponent]
     })
-    .compileComponents();
-  });
+      .compileComponents();
 
-  it('should create', () => {
     fixture = TestBed.createComponent(ButtonComponent);
     component = fixture.componentInstance;
     expect(component).toBeDefined();
   });
 
+  it('button label should contain input text', () => {
+    expect(component.label).toEqual('Button');
+  });
+
+  it('should be a primary button when the class is `btn-primary`', () => {
+    if (component.classes.includes('btn-primary')) {
+      expect(component.primary).toBeTrue();
+    }
+  });
+
   it('raises the selected event when clicked', () => {
-    component = new ButtonComponent();
-    component.label = fixture.nativeElement.value;
-    component.onClick.subscribe((selected) => expect(selected).toBe(component.label));
+  component.onClick.subscribe((selected) => expect(selected).toBe(component.label));
 });
 
 });
