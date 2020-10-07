@@ -386,10 +386,10 @@
         },
         {
             "name": "Task",
-            "id": "class-Task-09e29e6d1e969ac43e92e73f03d124c4",
+            "id": "class-Task-54ebc3102c1032a6382cd04bee5429d4",
             "file": "src/app/models/types.ts",
             "type": "class",
-            "sourceCode": "export abstract class Task {\n  id: string;\n  title: string;\n  state: string;\n  done?: boolean;\n}\n",
+            "sourceCode": "export abstract class Task {\n  id: string;\n  title: string;\n  state: string;\n  done?: boolean;\n}\n\nexport abstract class User {\n  id: string;\n  role: string;\n  lastName: string;\n  firstName: string;\n}\n",
             "properties": [
                 {
                     "name": "done",
@@ -447,6 +447,49 @@
                     "optional": false,
                     "description": "",
                     "line": 43
+                }
+            ],
+            "methods": [],
+            "indexSignatures": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": []
+        },
+        {
+            "name": "User",
+            "id": "class-User-54ebc3102c1032a6382cd04bee5429d4",
+            "file": "src/app/models/types.ts",
+            "type": "class",
+            "sourceCode": "export abstract class Task {\n  id: string;\n  title: string;\n  state: string;\n  done?: boolean;\n}\n\nexport abstract class User {\n  id: string;\n  role: string;\n  lastName: string;\n  firstName: string;\n}\n",
+            "properties": [
+                {
+                    "name": "firstName",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                },
+                {
+                    "name": "id",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                },
+                {
+                    "name": "lastName",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                },
+                {
+                    "name": "role",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
                 }
             ],
             "methods": [],
@@ -597,7 +640,7 @@
         },
         {
             "name": "FooterComponent",
-            "id": "component-FooterComponent-5cffbdd217340362b8e67e69ac703bdc",
+            "id": "component-FooterComponent-5ee4533b57aba7af8867c5d5ca5441a4",
             "file": "src/app/components/footer/footer.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -615,8 +658,8 @@
             "viewProviders": [],
             "inputsClass": [
                 {
-                    "name": "subheading",
-                    "defaultValue": "''",
+                    "name": "subtitle",
+                    "defaultValue": "'Footer Subtitle'",
                     "line": 10
                 },
                 {
@@ -642,7 +685,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-footer',\n  templateUrl: './footer.component.html',\n  styleUrls: ['./footer.component.scss']\n})\nexport class FooterComponent implements OnInit {\n  @Input() title = 'Footer Content';\n  @Input() subheading = '';\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-footer',\n  templateUrl: './footer.component.html',\n  styleUrls: ['./footer.component.scss']\n})\nexport class FooterComponent implements OnInit {\n  @Input() title = 'Footer Content';\n  @Input() subtitle = 'Footer Subtitle';\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -660,11 +703,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<footer class=\"page-footer bg-light pt-3\">\n  <!-- Footer Links -->\n  <div class=\"container-fluid text-center text-md-left\">\n    <!-- Grid row -->\n    <div class=\"row\">\n      <!-- Grid column -->\n      <div class=\"col-md-6 mt-md-0 mt-3\">\n        <!-- Content -->\n        <h5 class=\"text-uppercase\">{{title}}</h5>\n        <p class=\"small\">Here you can use rows and columns here to organize your footer content.</p>\n      </div>\n      <!-- Grid column -->\n      <hr class=\"clearfix w-100 d-md-none pb-3\">\n      <!-- Grid column -->\n      <div class=\"col-md-3 mb-md-0 mb-3\">\n\n          <!-- Links -->\n          <h5 class=\"text-uppercase\">Subtitle</h5>\n\n          <ul class=\"list-unstyled\">\n            <li>\n              <a href=\"#!\">Link 1</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 2</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 3</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 4</a>\n            </li>\n          </ul>\n\n        </div>\n        <!-- Grid column -->\n\n        <!-- Grid column -->\n        <div class=\"col-md-3 mb-md-0 mb-3\">\n\n          <!-- Links -->\n          <h5 class=\"text-uppercase\">Links</h5>\n\n          <ul class=\"list-unstyled\">\n            <li>\n              <a href=\"#!\">Link 1</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 2</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 3</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 4</a>\n            </li>\n          </ul>\n\n        </div>\n        <!-- Grid column -->\n    </div>\n    <!-- Grid row -->\n  </div>\n  <!-- Footer Links -->\n  <div class=\"footer-copyright text-center py-3\">2020\n    <a href=\"https://example.com/\"> Example.com</a>\n  </div>\n</footer>\n"
+            "templateData": "<footer class=\"page-footer bg-light pt-3\">\n  <!-- Footer Links -->\n  <div class=\"container-fluid text-center text-md-left\">\n    <!-- Grid row -->\n    <div class=\"row\">\n      <!-- Grid column -->\n      <div class=\"col-md-6 mt-md-0 mt-3\">\n        <!-- Content -->\n        <h5 class=\"text-uppercase\">{{title}}</h5>\n        <p class=\"small\">Here you can use rows and columns here to organize your footer content.</p>\n      </div>\n      <!-- Grid column -->\n      <hr class=\"clearfix w-100 d-md-none pb-3\">\n      <!-- Grid column -->\n      <div class=\"col-md-3 mb-md-0 mb-3\">\n\n          <!-- Links -->\n          <h5 class=\"text-uppercase\">{{subtitle}}</h5>\n\n          <ul class=\"list-unstyled\">\n            <li>\n              <a href=\"#!\">Link 1</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 2</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 3</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 4</a>\n            </li>\n          </ul>\n\n        </div>\n        <!-- Grid column -->\n\n        <!-- Grid column -->\n        <div class=\"col-md-3 mb-md-0 mb-3\">\n\n          <!-- Links -->\n          <h5 class=\"text-uppercase\">Links</h5>\n\n          <ul class=\"list-unstyled\">\n            <li>\n              <a href=\"#!\">Link 1</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 2</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 3</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 4</a>\n            </li>\n          </ul>\n\n        </div>\n        <!-- Grid column -->\n    </div>\n    <!-- Grid row -->\n  </div>\n  <!-- Footer Links -->\n  <div class=\"footer-copyright text-center py-3\">2020\n    <a href=\"https://example.com/\"> Example.com</a>\n  </div>\n</footer>\n"
         },
         {
             "name": "HeaderComponent",
-            "id": "component-HeaderComponent-2958fad997d554b13e948a58dad90216",
+            "id": "component-HeaderComponent-3525f0423055d72082fff67ef2468ec1",
             "file": "src/app/components/header/header.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -683,28 +726,27 @@
             "inputsClass": [
                 {
                     "name": "user",
-                    "defaultValue": "null",
-                    "line": 13,
-                    "type": "unknown"
+                    "line": 15,
+                    "type": "User | null"
                 }
             ],
             "outputsClass": [
                 {
                     "name": "onCreateAccount",
                     "defaultValue": "new EventEmitter<Event>()",
-                    "line": 22,
+                    "line": 24,
                     "type": "EventEmitter"
                 },
                 {
                     "name": "onLogin",
                     "defaultValue": "new EventEmitter<Event>()",
-                    "line": 16,
+                    "line": 18,
                     "type": "EventEmitter"
                 },
                 {
                     "name": "onLogout",
                     "defaultValue": "new EventEmitter<Event>()",
-                    "line": 19,
+                    "line": 21,
                     "type": "EventEmitter"
                 }
             ],
@@ -715,7 +757,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 10
+                    "line": 12
                 }
             ],
             "methodsClass": [
@@ -725,7 +767,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 24
+                    "line": 26
                 }
             ],
             "hostBindings": [],
@@ -733,7 +775,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\n\n@Component({\n  selector: 'app-header',\n  templateUrl: './header.component.html',\n  styleUrls: ['./header.component.scss']\n})\n\nexport class HeaderComponent implements OnInit {\n  title = 'Apothecary';\n  constructor() { }\n  @Input()\n  user: unknown = null;\n\n  @Output()\n  onLogin = new EventEmitter<Event>();\n\n  @Output()\n  onLogout = new EventEmitter<Event>();\n\n  @Output()\n  onCreateAccount = new EventEmitter<Event>();\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\n\nimport { User } from 'src/app/models/types';\n\n@Component({\n  selector: 'app-header',\n  templateUrl: './header.component.html',\n  styleUrls: ['./header.component.scss']\n})\n\nexport class HeaderComponent implements OnInit {\n  title = 'Apothecary';\n  constructor() { }\n\n  @Input() user: User | null;\n\n  @Output()\n  onLogin = new EventEmitter<Event>();\n\n  @Output()\n  onLogout = new EventEmitter<Event>();\n\n  @Output()\n  onCreateAccount = new EventEmitter<Event>();\n\n  ngOnInit(): void {\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -746,7 +788,7 @@
                 "name": "constructor",
                 "description": "",
                 "args": [],
-                "line": 10
+                "line": 12
             },
             "implements": [
                 "OnInit"
@@ -755,7 +797,7 @@
         },
         {
             "name": "PageComponent",
-            "id": "component-PageComponent-bb9aacd2398d0baf53bc94f06bcc0130",
+            "id": "component-PageComponent-da7deaf543ff5180745a871d516e3f0b",
             "file": "src/app/components/page/page.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -774,28 +816,27 @@
             "inputsClass": [
                 {
                     "name": "user",
-                    "defaultValue": "null",
-                    "line": 9,
-                    "type": "unknown"
+                    "line": 10,
+                    "type": "User | null"
                 }
             ],
             "outputsClass": [
                 {
                     "name": "onCreateAccount",
                     "defaultValue": "new EventEmitter<Event>()",
-                    "line": 18,
+                    "line": 19,
                     "type": "EventEmitter"
                 },
                 {
                     "name": "onLogin",
                     "defaultValue": "new EventEmitter<Event>()",
-                    "line": 12,
+                    "line": 13,
                     "type": "EventEmitter"
                 },
                 {
                     "name": "onLogout",
                     "defaultValue": "new EventEmitter<Event>()",
-                    "line": 15,
+                    "line": 16,
                     "type": "EventEmitter"
                 }
             ],
@@ -807,7 +848,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 21
+                    "line": 22
                 }
             ],
             "hostBindings": [],
@@ -815,7 +856,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\n\n@Component({\n  selector: 'app-page',\n  templateUrl: './page.component.html',\n  styleUrls: ['./page.component.scss']\n})\nexport class PageComponent implements OnInit {\n  @Input() user: unknown = null;\n\n  @Output()\n  onLogin = new EventEmitter<Event>();\n\n  @Output()\n  onLogout = new EventEmitter<Event>();\n\n  @Output()\n  onCreateAccount = new EventEmitter<Event>();\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\n\nimport {User} from '../../models/types';\n@Component({\n  selector: 'app-page',\n  templateUrl: './page.component.html',\n  styleUrls: ['./page.component.scss']\n})\nexport class PageComponent implements OnInit {\n  @Input() user: User | null;\n\n  @Output()\n  onLogin = new EventEmitter<Event>();\n\n  @Output()\n  onLogout = new EventEmitter<Event>();\n\n  @Output()\n  onCreateAccount = new EventEmitter<Event>();\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -828,12 +869,12 @@
                 "name": "constructor",
                 "description": "",
                 "args": [],
-                "line": 18
+                "line": 19
             },
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<app-header [user]=\"user\" (onLogout)=\"onLogout.emit($event)\" (onLogin)=\"onLogin.emit($event)\"\n  (onCreateAccount)=\"onCreateAccount.emit($event)\"></app-header>\n<section class=\"container\">\n  <!-- Content for different views goes here -->\n  <!-- <router-outlet></router-outlet> -->\n</section>\n<app-footer></app-footer>\n"
+            "templateData": "<app-header [user]=\"user\" (onLogout)=\"onLogout.emit($event)\" (onLogin)=\"onLogin.emit($event)\"\n  (onCreateAccount)=\"onCreateAccount.emit($event)\"></app-header>\n<section class=\"container\">\n  <h3 *ngIf=\"user\">Hello, {{user.firstName}}</h3>\n  <!-- Content for different views goes here -->\n  <!-- <router-outlet></router-outlet> -->\n</section>\n<app-footer></app-footer>\n"
         },
         {
             "name": "PureTaskListComponent",
@@ -1458,7 +1499,7 @@
                 "subtype": "variable",
                 "file": "src/app/components/footer/footer.stories.ts",
                 "type": "",
-                "defaultValue": "Template.bind({})"
+                "defaultValue": "() => ({\n  component: FooterComponent,\n})"
             },
             {
                 "name": "Default",
@@ -1528,7 +1569,7 @@
                 "name": "LoggedIn",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/page/page.stories.ts",
+                "file": "src/app/components/header/header.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -1536,14 +1577,6 @@
                 "name": "LoggedIn",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/header/header.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "LoggedOut",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/app/components/page/page.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
@@ -1553,6 +1586,14 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/app/components/header/header.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "LoggedOut",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/page/page.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -1639,14 +1680,6 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/page/page.stories.ts",
-                "type": "Story<PageComponent>",
-                "defaultValue": "(args: PageComponent) => ({\n  component: PageComponent,\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/app/components/button/button.stories.ts",
                 "type": "Story<ButtonComponent>",
                 "defaultValue": "(args: ButtonComponent) => ({\n  component: ButtonComponent,\n  props: {\n      ...args,\n      label: text('value', args.label ),\n      disabled: boolean('disabled', args.disabled)\n  }\n})"
@@ -1655,17 +1688,17 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/footer/footer.stories.ts",
-                "type": "Story<FooterComponent>",
-                "defaultValue": "(args: FooterComponent) => ({\n  component: FooterComponent,\n  props: args,\n})"
+                "file": "src/app/components/header/header.stories.ts",
+                "type": "Story<HeaderComponent>",
+                "defaultValue": "(args: HeaderComponent) => ({\n  component: HeaderComponent,\n})"
             },
             {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/header/header.stories.ts",
-                "type": "Story<HeaderComponent>",
-                "defaultValue": "(args: HeaderComponent) => ({\n  component: HeaderComponent,\n  props: args,\n})"
+                "file": "src/app/components/page/page.stories.ts",
+                "type": "Story<PageComponent>",
+                "defaultValue": "(args: PageComponent) => ({\n  component: PageComponent\n})"
             },
             {
                 "name": "WithPinnedTasks",
@@ -1854,15 +1887,7 @@
                     "subtype": "variable",
                     "file": "src/app/components/footer/footer.stories.ts",
                     "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/footer/footer.stories.ts",
-                    "type": "Story<FooterComponent>",
-                    "defaultValue": "(args: FooterComponent) => ({\n  component: FooterComponent,\n  props: args,\n})"
+                    "defaultValue": "() => ({\n  component: FooterComponent,\n})"
                 }
             ],
             "src/environments/environment.prod.ts": [
@@ -1883,32 +1908,6 @@
                     "file": "src/environments/environment.ts",
                     "type": "object",
                     "defaultValue": "{\n  production: false\n}"
-                }
-            ],
-            "src/app/components/page/page.stories.ts": [
-                {
-                    "name": "LoggedIn",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/page/page.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "LoggedOut",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/page/page.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/page/page.stories.ts",
-                    "type": "Story<PageComponent>",
-                    "defaultValue": "(args: PageComponent) => ({\n  component: PageComponent,\n  props: args,\n})"
                 }
             ],
             "src/app/components/header/header.stories.ts": [
@@ -1934,7 +1933,33 @@
                     "subtype": "variable",
                     "file": "src/app/components/header/header.stories.ts",
                     "type": "Story<HeaderComponent>",
-                    "defaultValue": "(args: HeaderComponent) => ({\n  component: HeaderComponent,\n  props: args,\n})"
+                    "defaultValue": "(args: HeaderComponent) => ({\n  component: HeaderComponent,\n})"
+                }
+            ],
+            "src/app/components/page/page.stories.ts": [
+                {
+                    "name": "LoggedIn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/page/page.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "LoggedOut",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/page/page.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/page/page.stories.ts",
+                    "type": "Story<PageComponent>",
+                    "defaultValue": "(args: PageComponent) => ({\n  component: PageComponent\n})"
                 }
             ],
             "src/jest-config/globalMocks.ts": [
@@ -2115,16 +2140,6 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Default",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/components/footer/footer.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Template",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -2389,6 +2404,15 @@
                 "type": "class",
                 "linktype": "classe",
                 "name": "Task",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/models/types.ts",
+                "type": "class",
+                "linktype": "classe",
+                "name": "User",
                 "coveragePercent": 0,
                 "coverageCount": "0/5",
                 "status": "low"
