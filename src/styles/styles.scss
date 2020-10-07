@@ -41,14 +41,9 @@ a {
 
 .btn {
   border-radius: 0;
-  &:disabled {
-    background-color: inherit;
-    color: inherit;
-    cursor: not-allowed;
-  }
 
-  &.btn-primary,
-  &:not(disabled) {
+
+  &.btn-primary {
     background-color: transparent;
     color: $barkbrown;
     outline: $button-outline solid 2px;
@@ -56,8 +51,7 @@ a {
     &:hover,
     &:active,
     &:focus-within,
-    .show,
-    &:not(disabled) {
+    .show {
       font-weight: bold;
       background-color: $white;
       color: $barkbrown;
@@ -68,16 +62,24 @@ a {
 
   &.btn-secondary {
     background-color: $secondary-button-fill;
-    color: $stone-gray;
-    outline: $webfriendlygray solid 2px;
+    color: $darktealgreen;
+    outline: $sage-green solid 2px;
   }
-  &:hover,
-  &:active,
-  .show,
-  &:not(disabled) {
+
+  &:hover {
     font-weight: bold;
-    color: $white;
-    background-color: $darktealgreen;
+  }
+
+  &:disabled,
+  .disabled{
+    cursor: not-allowed;
+    color: initial;
+    outline: inherit;
+    background-color: initial;
+    &:hover, &:active, &:focus-within {
+      font-weight: unset;
+      background-color: unset;
+    }
   }
 }
 
@@ -87,4 +89,14 @@ kbd,
 samp {
   color: inherit;
   background-color: inherit;
+}
+
+footer {
+  box-sizing: border-box;
+  display: inherit;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }

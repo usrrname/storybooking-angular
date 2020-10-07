@@ -21,7 +21,7 @@ const Template: Story<ButtonComponent> = (args: ButtonComponent) => ({
   props: {
       ...args,
       label: text('value', args.label ),
-      disabled: boolean('disabled', false)
+      disabled: boolean('disabled', args.disabled)
   }
 });
 

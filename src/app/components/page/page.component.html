@@ -1,6 +1,7 @@
 <app-header [user]="user" (onLogout)="onLogout.emit($event)" (onLogin)="onLogin.emit($event)"
   (onCreateAccount)="onCreateAccount.emit($event)"></app-header>
 <section class="container">
+  <h3 *ngIf="user">Hello, {{user.firstName}}</h3>
   <!-- Content for different views goes here -->
   <!-- <router-outlet></router-outlet> -->
 </section>

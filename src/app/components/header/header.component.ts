@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
+import { User } from 'src/app/models/types';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -9,8 +11,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class HeaderComponent implements OnInit {
   title = 'Apothecary';
   constructor() { }
-  @Input()
-  user: unknown = null;
+
+  @Input() user: User | null;
 
   @Output()
   onLogin = new EventEmitter<Event>();

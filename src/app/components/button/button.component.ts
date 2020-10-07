@@ -15,8 +15,7 @@ export default class ButtonComponent {
   /**
    * Disabled property is by default false
    */
-  @Input()
-  disabled = false;
+  @Input() disabled = false;
   /**
    * What background color to use
    */
@@ -45,7 +44,7 @@ export default class ButtonComponent {
 
   public get classes(): string[] {
     const mode = this.primary ? 'btn-primary' : 'btn-secondary';
-
-    return ['btn', `btn-${this.size}`, mode];
+    const isDisabled = this.disabled === false ? '' : 'disabled';
+    return ['btn', `btn-${this.size}`, mode, isDisabled];
   }
 }

@@ -1,24 +1,10 @@
-import { Meta, Story } from '@storybook/angular/types-6-0';
-
-import { CommonModule } from '@angular/common';
-import {FooterComponent} from './footer.component'
-import { moduleMetadata } from '@storybook/angular/dist/client/preview/types';
+import {FooterComponent} from './footer.component';
 
 export default {
   title: 'Bootstrap/Footer',
-  component: FooterComponent,
-  decorators: [
-    moduleMetadata({
-      imports: [CommonModule],
-    }),
-  ],
-} as Meta;
+  component: FooterComponent
+};
 
-
-const Template: Story<FooterComponent> = (args: FooterComponent) => ({
+export const Default = () => ({
   component: FooterComponent,
-  props: args,
 });
-
-export const Default = Template.bind({});
-Default.args = {};

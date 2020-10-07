@@ -8,7 +8,9 @@ import { CommonModule } from '@angular/common';
 import { FooterComponent } from '../footer/footer.component';
 import {HeaderComponent} from '../header/header.component';
 import {PageComponent} from './page.component';
+import { User } from 'src/app/models/types';
 import { moduleMetadata } from '@storybook/angular';
+import { withA11y } from '@storybook/addon-a11y';
 
 export default {
   title: 'Example/Page',
@@ -20,16 +22,18 @@ export default {
       providers: [PageComponent]
     }),
   ],
+  argTypes: {
+    user: { 'user': User }
+  }
 } as Meta;
 
 const Template: Story<PageComponent> = (args: PageComponent) => ({
-  component: PageComponent,
-  props: args,
+  component: PageComponent
 });
 
 export const LoggedIn = Template.bind({});
 LoggedIn.args = {
-  ...HeaderStories.LoggedIn.args,
+  ...HeaderStories.LoggedIn.args
 };
 
 export const LoggedOut = Template.bind({});
